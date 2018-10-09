@@ -1,0 +1,44 @@
+/**
+	 * 
+	 * @author mao
+	 * @时间    2018年9月6日
+	 */
+	@SuppressWarnings("unlikely-arg-type")
+	@Override
+	public List<DeptAppVo> selectByDeptApp() {
+		List<DeptAppVo> appDeptList = new ArrayList<DeptAppVo>();
+		DeptVo deptVo = new DeptVo(); 
+		// 查询条件： 一级部门编号
+		deptVo.setDeptId("DETP-1000000000000000000");
+		
+		// 查询所有一级部门
+		List<DeptVo> deptVoList = deptDao.selectByDept(deptVo);
+		String firstLetter ;
+		TreeSet<String> firstLetters = new TreeSet<String>();
+		for (DeptVo deptVo2 : deptVoList) {
+			firstLetter = ChineseHelper.getFirstLetter(deptVo2.getName());
+			if (!firstLetters.contains(firstLetter)) {
+				firstLetters.add(firstLetter);
+			}
+		}
+		for (String letter : firstLetters) {
+			DeptAppVo deptAppVo = new DeptAppVo();
+			deptAppVo.setLetter(letter);
+			List<DeptVo> deptLetterList = new ArrayList<DeptVo>();
+			for (DeptVo deptVo2 : deptVoList) {
+				if (letter.equals(ChineseHelper.getFirstLetter(deptVo2.getName()))) {
+					deptLetterList.add(deptVo2);
+					deptAppVo.setDeptVoList(deptLetterList);
+				}
+				
+			}
+			appDeptList.add(deptAppVo);
+		}
+		for (DeptVo deptVo2 : deptVoList) {
+			// 查询所有子部门
+			List<DeptVo> list = deptDao.selectByDept(deptVo2);
+			
+			deptVo2.setDeptVoList(list);
+		}
+		return appDeptList;
+	}
