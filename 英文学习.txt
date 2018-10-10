@@ -1,0 +1,2 @@
+remote:enumerating //远程 列举
+remote:compressing //远程 压缩
