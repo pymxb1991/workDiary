@@ -6,3 +6,6 @@ java 基础学习
 多线程性：      摩尔定律
 
 java applet
+
+
+java applet

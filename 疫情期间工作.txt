@@ -1,0 +1,94 @@
+2020-02-08+*-hhhhhhhhhhhhhhh h
+
+1、github  代码上传，调试
+2、巡逻管理模块合并 
+3、巡逻管理模块 -- 数据库表 整理
+4、新增菜单 --数据整理
+
+2020-02-09
+
+1、 巡逻管理模块 字典  整理
+2、 监控设备管控、围栏报警日志、代码合并
+3、 APP端接口合并
+
+2020-02-10 星期一
+
+1、数据统计分析模块移植，问题修改；
+2、绩效统计移植，问题修改；
+3、地理信息模块：app终端代码合并；问题待修改
+4、围栏报警日志管理 问题跟踪
+
+2020-02-11 星期二
+
+1、巡逻管理模块 字典  整理；
+2、地理信息模块问题修改；
+3、巡更管理，数据统计分析，绩效统计分析模块 
+
+2020-02-12 星期三
+
+1、APP端接口合并
+2、数据库合并，问题修改
+   --1、CcmMobileDeviceDao.xml    findByDeviceId
+
+2020-02-13 星期四
+1、 更新错误问题跟踪处理
+
+2020-02-14 星期五
+1、APP 测试
+
+2020-02-15 星期六
+1、BUG 修改
+
+
+2020-02-17 星期一
+
+BUG 分配 
+   耿浩帅20年2月BUG  问题修改：
+   赵桐：
+         地理信息服务平台 序号 1：
+      	     1、楼样式修改
+      	     2、左侧/上侧方向按钮 整合成一个
+   耿浩：
+        社会信息采集平台 序号：9、11、12、14、15
+   	
+		首页问题修改：增加Y轴，表示新增人数总数
+   王宁：
+       大数据联动业务协同平台 序号：1 修改根目前样式匹配即可；
+	   验证大数据联动BUG：
+毛晓斌	
+	ccm_base_place  基础场所 数据源
+	学校：
+	    http://localhost:8080/arjccm/a/sys/map/ccmOrgNpseMap?type=32
+		
+		Schoolrimlist = ccmHouseSchoolrimService.findList(ccmHouseSchoolrimDto);
+	医院：
+		http://localhost:8080/arjccm/a/sys/map/ccmOrgCommonalityMap?type=2
+		
+		ccmOrgCommonalityList = ccmOrgCommonalityService.findCommonalityList(ccmOrgCommonalityDto);
+	加油站：
+		http://localhost:8080/arjccm/a/sys/map/findMapIndustry?type=1
+		
+		 1、加油站	  2、商场超市	  3、娱乐场所  	4、酒店宾馆		5、涉危涉爆
+		 ccmOrgNpseList = ccmOrgNpseService.findList(ccmOrgNpseDto);
+		  2、商场超市
+		 http://localhost:8080/arjccm/a/sys/map/findMapIndustry?type=2
+		 
+		 http://localhost:8080/arjccm/a/sys/map/findMapIndustry?type=3
+
+1、加油站只要加油站 -()
+2、学校 - 不变
+3、医院 -- 
+4、娱乐场所 --(合并娱乐场所)
+5、酒店宾馆  
+
+
+    1、添加场所，重点场所为空问题BUG；
+	2、添加页面没有标注，没有保存点位信息；
+问题，
+1、公众号需要修改的：APP 上传问题，一个平台只上传一个APP逻辑需要修改，务川的有两个APP； 
+2、CcmDeviceService.getTreeControlPeopleData();
+   CcmDeviceService.getTreeeopleData();
+3、扶贫警务的APP,跟管控的APP 后期也得优化           tdrgdrvw46564;pvbg  
+
+
+ h54656h
