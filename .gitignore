@@ -1,0 +1,40 @@
+##ignore this file##
+/target/
+
+.classpath
+.project
+.settings 
+.idea 
+/WebContent/WEB-INF/classes  
+ ##filter databfile、sln file##
+
+  
+##class file##
+*.com  
+*.class  
+*.dll  
+*.exe  
+*.o  
+*.so
+# compression file
+*.7z  
+*.dmg  
+*.gz  
+*.iso  
+*.jar  
+*.rar  
+*.tar  
+*.zip  
+*.via
+*.tmp
+*.err
+# OS generated files #  
+licese.lic
+.DS_Store  
+.DS_Store?  
+._*  
+.Spotlight-V100  
+.Trashes  
+Icon?  
+ehthumbs.db  
+Thumbs.db
